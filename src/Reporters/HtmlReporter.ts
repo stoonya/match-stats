@@ -8,6 +8,6 @@ export class HtmlReporter implements MatchReporter {
     <h1>HTML REPORT</h1>
     <div>${report}</div>`
 
-    fs.writeFileSync('././HtmlReports/report.html', file);
+    fs.writeFileSync('././htmlReports/report.html', file);
   }
 }
