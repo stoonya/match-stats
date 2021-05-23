@@ -1,0 +1,27 @@
+{
+  "name": "match-stats",
+  "version": "1.0.0",
+  "description": "The application to read football/soccer data from csv file and analyse it",
+  "main": "index.ts",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stoonya/match-stats.git"
+  },
+  "author": "stoonya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stoonya/match-stats/issues"
+  },
+  "homepage": "https://github.com/stoonya/match-stats#readme",
+  "dependencies": {
+    "@types/node": "^15.3.1",
+    "concurrently": "^6.1.0",
+    "moment": "^2.29.1",
+    "nodemon": "^2.0.7"
+  }
+}
