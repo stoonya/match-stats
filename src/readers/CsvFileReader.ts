@@ -14,4 +14,3 @@ export class CsvFileReader implements Reader {
       .map((line: string): string[] => line.split(','));
   }
 }
-
