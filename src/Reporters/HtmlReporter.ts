@@ -8,6 +8,12 @@ export class HtmlReporter implements MatchReporter {
     <h1>HTML REPORT</h1>
     <div>${report}</div>`
 
-    fs.writeFileSync('././htmlReports/report.html', file);
+    const dir = '././htmlReports/';
+    
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir);
+    }
+    
+    fs.writeFileSync(`${dir}/report.html`, file);
   }
 }
