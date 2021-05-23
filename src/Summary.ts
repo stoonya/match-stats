@@ -1,10 +1,10 @@
-import { AvgGoalsAnalysis } from "./Analyzers/AvgGoalsAnalysis";
-import { MatchAnalyzer } from "./Analyzers/MatchAnalyzer";
-import { WinsAnalysis } from "./Analyzers/WinsAnalysis";
+import { AvgGoalsAnalysis } from "./analyzers/AvgGoalsAnalysis";
+import { MatchAnalyzer } from "./analyzers/MatchAnalyzer";
+import { WinsAnalysis } from "./analyzers/WinsAnalysis";
 import { Match } from "./Match";
-import { ConsoleReporter } from "./Reporters/ConsoleReporter";
-import { HtmlReporter } from "./Reporters/HtmlReporter";
-import { MatchReporter } from "./Reporters/MatchReporter";
+import { ConsoleReporter } from "./reporters/ConsoleReporter";
+import { HtmlReporter } from "./reporters/HtmlReporter";
+import { MatchReporter } from "./reporters/MatchReporter";
 
 export class Summary {
   static avgGoalsToConsole(teamName: string): Summary {
