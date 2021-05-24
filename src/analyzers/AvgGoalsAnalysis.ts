@@ -10,8 +10,6 @@ export class AvgGoalsAnalysis implements MatchAnalyzer {
     let gamesCounter = 0;
     let goalsForCounter = 0;
     let goalsAgainstCounter = 0;
-    let avgGoalsFor = 0;
-    let avgGoalsAgainst = 0;
     
     matches.forEach((match: Match): void => {
       
@@ -26,8 +24,8 @@ export class AvgGoalsAnalysis implements MatchAnalyzer {
       }
     });
 
-    avgGoalsFor = Math.round(((goalsForCounter / gamesCounter) + Number.EPSILON) * 100) / 100;
-    avgGoalsAgainst = Math.round(((goalsAgainstCounter / gamesCounter) + Number.EPSILON) * 100) / 100;
+    const avgGoalsFor = Math.round(((goalsForCounter / gamesCounter) + Number.EPSILON) * 100) / 100;
+    const avgGoalsAgainst = Math.round(((goalsAgainstCounter / gamesCounter) + Number.EPSILON) * 100) / 100;
 
     return `${this.teamName}'s avg GF: ${avgGoalsFor} and avg GA: ${avgGoalsAgainst}`;
   }

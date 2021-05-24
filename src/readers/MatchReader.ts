@@ -18,19 +18,16 @@ export class MatchReader {
   }
 
   private convertToMatches(data: string[][]): void {
-    data.forEach((data: string[]) => {
-
-      const match: Match = {
-      date: moment(data[0], "DD/MM/YYYY").toDate(),
-      homeTeam: data[1],
-      awayTeam: data[2],
-      homeGoals: parseFloat(data[3]),
-      awayGoals: parseFloat(data[4]),
-      matchResult: data[5] as MatchResult,
-      referee: data[6]
+    this.matches = data.map((row: string[]) => {
+      return {
+        date: moment(row[0], "DD/MM/YYYY").toDate(),
+        homeTeam: row[1],
+        awayTeam: row[2],
+        homeGoals: parseFloat(row[3]),
+        awayGoals: parseFloat(row[4]),
+        matchResult: row[5] as MatchResult,
+        referee: row[6]
       }
-    
-      this.matches.push(match);
     });
   }
 }
